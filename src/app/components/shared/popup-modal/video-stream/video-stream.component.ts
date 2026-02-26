@@ -18,23 +18,6 @@
 import { Component, ElementRef, OnDestroy, ViewChild, AfterViewInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
-declare class EncodedVideoChunk {
-  constructor(chunk: any);
-}
-
-type VideoDecoderConfig = {
-  codec: string;
-  hardwareAcceleration: string;
-};
-
-declare class VideoDecoder {
-  constructor(decoder: any);
-  decode(chunk: any): void;
-  reset(): void;
-  close(): void;
-  configure(config: VideoDecoderConfig): void;
-}
-
 @Component({
   selector: 'app-video-stream',
   templateUrl: './video-stream.component.html',

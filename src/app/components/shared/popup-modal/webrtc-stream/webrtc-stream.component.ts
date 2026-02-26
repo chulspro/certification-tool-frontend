@@ -19,13 +19,7 @@ import { Component, Input, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { WebRTCService } from 'src/app/shared/core_apis/webrtc.service';
 import { LOW_AUDIO_THRESHOLD, MEDIUM_AUDIO_THRESHOLD, AUDIO_LEVEL_COLORS } from '../utils';
-
-export interface WebRTCSession {
-  remoteStream$: Observable<MediaStream | null>;
-  remoteAudioLevel$: Observable<number>;
-  localAudioLevel$: Observable<number>;
-  connectionState$: Observable<string>;
-}
+import { WebRTCSession } from './webrtc-stream.model';
 
 @Component({
   selector: 'app-webrtc-stream',

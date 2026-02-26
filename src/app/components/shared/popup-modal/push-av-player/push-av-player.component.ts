@@ -19,17 +19,7 @@ import { Component, ElementRef, OnDestroy, ViewChild, AfterViewInit } from '@ang
 import { TestRunAPI } from 'src/app/shared/core_apis/test-run';
 import { environment } from 'src/environments/environment';
 import shaka from 'shaka-player';
-
-export interface Stream {
-  id: number;
-  valid_uploads: { file_path: string }[];
-  error_uploads: { file_path: string; reasons?: string[] }[];
-}
-
-export interface NonConformingFile {
-  file_path: string;
-  validation_error_reason: string;
-}
+import { Stream, NonConformingFile } from './push-av-player.model';
 
 @Component({
   selector: 'app-push-av-player',
